@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "deny": [
+      "mcp__filesystem-docs-novatech__write_file",
+      "mcp__filesystem-docs-novatech__edit_file",
+      "mcp__filesystem-docs-novatech__move_file",
+      "mcp__filesystem-docs-novatech__create_directory",
+      "mcp__filesystem-retrieval-corpus__write_file",
+      "mcp__filesystem-retrieval-corpus__edit_file",
+      "mcp__filesystem-retrieval-corpus__move_file",
+      "mcp__filesystem-retrieval-corpus__create_directory",
+      "mcp__git__git_commit",
+      "mcp__git__git_add",
+      "mcp__git__git_reset",
+      "mcp__git__git_checkout",
+      "mcp__git__git_create_branch"
+    ]
+  }
+}

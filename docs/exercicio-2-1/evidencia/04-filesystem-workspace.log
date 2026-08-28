@@ -1,0 +1,13 @@
+[stderr] Secure MCP Filesystem Server running on stdio
+[stderr] Client does not support MCP Roots, using allowed directories set from server args: [
+[stderr]   '<repo>/src',
+[stderr]   '<repo>/specs',
+[stderr]   '<repo>/skills'
+[stderr] ]
+=== Subindo MCP server 'filesystem-workspace': npx -y @modelcontextprotocol/server-filesystem ./src ./specs ./skills ===
+>>> SEND: {"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {"protocolVersion": "2025-06-18", "capabilities": {}, "clientInfo": {"name": "exercicio-2-1-evidence-client", "version": "0.1.0"}}}
+<<< RECV: {"result":{"protocolVersion":"2025-06-18","capabilities":{"tools":{"listChanged":true}},"serverInfo":{"name":"secure-filesystem-server","version":"0.2.0"}},"jsonrpc":"2.0","id":1}
+>>> SEND: {"jsonrpc": "2.0", "method": "notifications/initialized"}
+>>> SEND: {"jsonrpc": "2.0", "id": 2, "method": "tools/call", "params": {"name": "list_allowed_directories", "arguments": {}}}
+<<< RECV: {"result":{"content":[{"type":"text","text":"Allowed directories:\n<repo>/src\n<repo>/specs\n<repo>/skills"}],"structuredContent":{"content":"Allowed directories:\n<repo>/src\n<repo>/specs\n<repo>/skills"}},"jsonrpc":"2.0","id":2}
+### Resultado de tools/call 'list_allowed_directories': OK
